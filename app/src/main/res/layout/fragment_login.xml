@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".auth.ui.activity.AuthActivity">
+
+    <LinearLayout
+        android:id="@+id/topLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_18sdp"
+        android:layout_marginTop="@dimen/_22sdp"
+        android:layout_marginEnd="@dimen/_18sdp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_medium"
+            android:text="Welcome,"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_22sdp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/raleway"
+            android:text="Sign in to continue!"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_18sdp" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_margin="@dimen/_18sdp"
+        android:layout_centerInParent="true"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/email_input_layout"
+            style="@style/TextInputLayoutStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColorHint="#7E7676"
+            app:boxCornerRadiusTopEnd="@dimen/_12sdp"
+            app:boxCornerRadiusBottomEnd="@dimen/_12sdp"
+            android:hint="Email Id"
+            app:hintTextColor="@color/dark_grey2"
+            app:boxCornerRadiusTopStart="@dimen/_12sdp"
+            app:boxCornerRadiusBottomStart="@dimen/_12sdp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/email_edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_44sdp"
+                android:fontFamily="@font/poppins_medium"
+                android:inputType="textEmailAddress"
+                android:singleLine="true"
+                android:textColor="@color/black"
+                android:textCursorDrawable="@null"
+                android:textSize="@dimen/_10sdp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/password_input_layout"
+            style="@style/TextInputLayoutStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColorHint="#7E7676"
+            app:boxCornerRadiusTopEnd="@dimen/_12sdp"
+            android:layout_below="@id/email_input_layout"
+            app:boxCornerRadiusBottomEnd="@dimen/_12sdp"
+            android:hint="Password"
+            app:passwordToggleEnabled="true"
+            app:passwordToggleTint="@color/pink_500"
+            android:layout_marginTop="@dimen/_12sdp"
+            app:hintTextColor="@color/dark_grey2"
+            app:boxCornerRadiusTopStart="@dimen/_12sdp"
+            app:boxCornerRadiusBottomStart="@dimen/_12sdp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/password_edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_44sdp"
+                android:fontFamily="@font/poppins_medium"
+                android:inputType="textPassword"
+                android:singleLine="true"
+                android:lines="1"
+                android:textColor="@color/black"
+                android:textCursorDrawable="@null"
+                android:textSize="@dimen/_10sdp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/forgotPassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/password_input_layout"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_10sdp"
+            android:fontFamily="@font/poppins_medium"
+            android:text="Forgot Password?"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/login_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/forgotPassword"
+            android:layout_marginTop="@dimen/_22sdp"
+            android:background="@drawable/login_butt_back"
+            android:fontFamily="@font/raleway_medium"
+            android:padding="@dimen/_8sdp"
+            android:text="Login"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_12sdp" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:id="@+id/facebook_btn"
+            app:cardBackgroundColor="#F1F3FD"
+            app:cardCornerRadius="@dimen/_8sdp"
+            android:layout_marginTop="@dimen/_12sdp"
+            app:cardElevation="0dp"
+            android:layout_below="@id/login_button"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:gravity="center"
+                android:padding="@dimen/_10sdp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:layout_width="@dimen/_18sdp"
+                    android:layout_height="@dimen/_18sdp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginEnd="@dimen/_4sdp"
+                    android:src="@drawable/facebook"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_4sdp"
+                    android:textColor="@color/facebookColor"
+                    android:textSize="@dimen/_10sdp"
+                    android:fontFamily="@font/raleway_medium"
+
+                    android:text="Connect with Facebook"/>
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/_22sdp"
+        android:layout_centerHorizontal="true"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="I'm a new user. "
+            android:textSize="@dimen/_12sdp"
+            android:fontFamily="@font/raleway_medium"
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:id="@+id/signup_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sign Up"
+            android:textSize="@dimen/_12sdp"
+            android:paddingTop="@dimen/_8sdp"
+            android:paddingEnd="@dimen/_8sdp"
+            android:paddingBottom="@dimen/_8sdp"
+            android:textColor="@color/pink_700"
+            android:fontFamily="@font/raleway_medium"/>
+
+    </LinearLayout>
+
+</RelativeLayout>
