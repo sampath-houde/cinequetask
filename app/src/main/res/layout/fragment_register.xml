@@ -16,8 +16,10 @@
         android:orientation="vertical">
 
         <ImageView
-            android:layout_width="@dimen/_20sdp"
-            android:layout_height="@dimen/_20sdp"
+            android:id="@+id/back_btn"
+            android:layout_width="@dimen/_22sdp"
+            android:layout_height="@dimen/_22sdp"
+            android:padding="@dimen/_4sdp"
             android:src="@drawable/ic_baseline_keyboard_backspace_24"
             app:tint="@color/black" />
 
